@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "EB Garamond", serif;
+}
+body {
+  overflow: hidden;
+}
+
+#heading {
+  background-image: url("galaxy1.jpg");
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+#time {
+  /* color: #00bec5;
+  color: #feda15; */
+  color: #fff;
+  font-size: 6rem;
+}
+.greeting {
+  color: #fff;
+  padding-top: 9rem;
+}
+.greeting h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+#date {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.details {
+  position: absolute;
+  width: 100vw;
+  bottom: 20rem;
+  transform: translateY(413%);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Styling */
+.btn {
+  font-family: "EB Garamond", serif;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  border: 1px solid black;
+
+  min-width: 2rem;
+}
+.details .btn {
+  margin-left: 3rem;
+}
+
+.head {
+  margin-left: 1rem;
+  position: absolute;
+  background-color: black;
+  height: 35vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 98%;
+  border-radius: 20px;
+  visibility: hidden;
+  margin-top: 2rem;
+}
+.title {
+  color: #fff;
+  text-align: center;
+  padding-top: 3rem;
+}
+.title h3 {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.settings {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -20%;
+  background-color: #282828;
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+i.icon {
+  position: absolute;
+  left: 122%;
+  top: 3rem;
+  font-size: 2rem;
+  color: #fff;
+}
+.settings h2 {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+.settings .first {
+  margin-top: 2rem;
+}
+.settings .second {
+  margin-top: 2rem;
+}
+.settings .third {
+  margin-top: 2rem;
+}
+.settings .fourth {
+  margin-top: 2rem;
+}
+.settings .btn {
+  margin-top: 1rem;
+}
+.settings input {
+  margin-left: 1rem;
+}
+hr {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.weight {
+  font-weight: 500;
+}
+
+/* hidden class */
+.overlay {
+  transform: translateY(0);
+}
+.overlay_hidden {
+  visibility: visible;
+}
+.setting_overlay {
+  left: 0;
+}
+
+.shift_icon {
+  left: 108% !important ;
+}
