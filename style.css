@@ -14,6 +14,7 @@ body {
   min-height: 100vh;
   width: 100vw;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   text-align: center;
 }
@@ -35,42 +36,42 @@ body {
   font-size: 1.5rem;
   color: #fff;
 }
-.details {
-  position: absolute;
-  width: 100vw;
-  bottom: 20rem;
-  transform: translateY(413%);
-  transition: all 0.3s ease-in-out;
-}
 
-/* Button Styling */
-.btn {
+/* Button style */
+button {
   font-family: "EB Garamond", serif;
-  font-size: 1.3rem;
-  text-transform: capitalize;
-  font-weight: 500;
-  padding: 0.3rem 1rem;
-  border-radius: 5px;
-  border: 1px solid black;
-
+  border: none;
+  border-radius: 2px;
+  padding: 5px 17px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
   min-width: 2rem;
-}
-.details .btn {
-  margin-left: 3rem;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  box-shadow: 0 0 4px #999;
+  outline: none;
 }
 
-.head {
+.details {
+  position: fixed;
+  border-radius: 15px;
+  width: 98vw;
   margin-left: 1rem;
-  position: absolute;
   background-color: black;
   height: 35vh;
   display: grid;
+  bottom: -35%;
   grid-template-columns: 1fr 1fr;
-  width: 98%;
-  border-radius: 20px;
-  visibility: hidden;
-  margin-top: 2rem;
+  transition: all 0.3s ease-in-out;
 }
+
+.details .detailsBtn {
+  position: absolute;
+  margin-left: 3rem;
+  bottom: 126%;
+}
+
 .title {
   color: #fff;
   text-align: center;
@@ -134,15 +135,120 @@ hr {
 
 /* hidden class */
 .overlay {
-  transform: translateY(0);
+  bottom: 3%;
 }
-.overlay_hidden {
-  visibility: visible;
-}
+
 .setting_overlay {
   left: 0;
 }
 
 .shift_icon {
   left: 108% !important ;
+}
+.shift_more_icon {
+  bottom: 110% !important;
+}
+/* Media Query */
+
+@media only screen and (max-width: 420px) {
+  .greeting h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  #time {
+    font-size: 4rem;
+  }
+  .details {
+    height: 30vh;
+    width: 92%;
+  }
+  .details .detailsBtn {
+    padding: 0px 12px;
+    font-size: 1rem;
+    margin-left: 1.3rem;
+    bottom: 188%;
+  }
+
+  .title {
+    padding-top: 3rem;
+  }
+  .title h3 {
+    font-size: 0.8rem;
+  }
+  i.icon {
+    font-size: 1.8rem;
+    top: 1rem;
+  }
+  .settings {
+    width: 100%;
+    left: -114%;
+  }
+
+  .shift_icon {
+    left: 0 !important;
+  }
+  .setting_overlay {
+    left: 0;
+  }
+  .shift_more_icon {
+    bottom: 112%;
+  }
+  .overlay {
+    bottom: 7%;
+  }
+}
+
+@media only screen and (max-device-width: 420px) {
+  .greeting h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  #time {
+    font-size: 4rem;
+  }
+  .details {
+    height: 30vh;
+    width: 92%;
+  }
+  .details .detailsBtn {
+    padding: 0px 12px;
+    font-size: 1rem;
+    margin-left: 1.3rem;
+    bottom: 188%;
+  }
+
+  .title {
+    padding-top: 3rem;
+  }
+  .title h3 {
+    font-size: 0.8rem;
+  }
+  i.icon {
+    font-size: 1.8rem;
+    top: 1rem;
+  }
+  .settings {
+    width: 100%;
+    left: -114%;
+  }
+
+  .overlay {
+    bottom: 16%;
+  }
+
+  .shift_icon {
+    left: 0 !important;
+  }
+  .setting_overlay {
+    left: 0;
+  }
+  .shift_more_icon {
+    bottom: 112%;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (width: 375px) and (height: 736px) and (device-aspect-ratio: 375/667) {
+  .overlay {
+    bottom: 2%;
+  }
 }
